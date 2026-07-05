@@ -395,3 +395,33 @@ letter-spacing:.08em;
 text-transform:uppercase;
 
 }
+
+
+/* ==================================================
+   Workshop
+================================================== */
+
+.workshop-entry {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 0;
+}
+
+.workshop-meta {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: .5rem 0 1rem;
+}
+
+.workshop-body {
+    max-width: 42rem;
+    padding-left: 1.75rem;
+}
+
+.related-links {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border);
+}
