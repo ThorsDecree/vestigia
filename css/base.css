@@ -1,0 +1,290 @@
+/*
+    VESTIGIA
+
+    Building continuity.
+
+    Base
+
+    Foundations.
+
+    Leave good maps.
+*/
+
+
+
+/* ==================================================
+   Reset
+================================================== */
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto;
+    }
+}
+
+
+
+body {
+
+    margin: 0;
+
+    background: var(--bg);
+
+    color: var(--text-muted);
+
+    font-family: Inter, sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+
+    text-rendering: optimizeLegibility;
+
+}
+
+
+
+h1,
+h2,
+h3,
+strong,
+.button,
+.site-title {
+
+    color: var(--text);
+
+}
+
+.lede {
+
+    color: var(--text);
+
+    margin-bottom: 2rem;
+
+}
+
+.page-section + .page-section {
+
+    padding-top: calc(var(--space-xl) * 1.5);
+
+}
+
+
+
+article {
+
+    background: rgba(255,255,255,.015);
+
+    border: 1px solid rgba(255,255,255,.05);
+
+    transition: .5s ease;
+
+}
+
+article:hover {
+
+    border-color: rgba(216,183,106,.2);
+
+}
+
+
+.site-log {
+
+    opacity: .65;
+
+    font-size: .95rem;
+
+}
+
+
+/* ==================================================
+   Lists
+================================================== */
+
+ul,
+ol {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+
+/* ==================================================
+   Typography
+================================================== */
+
+h1,
+h2,
+h3 {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    letter-spacing: .01em;
+
+}
+
+
+
+h1 {
+
+    font-size: clamp(3rem, 8vw, 5rem);
+
+}
+
+
+
+h2 {
+
+    font-size: clamp(2rem, 5vw, 2.75rem);
+
+}
+
+
+
+h3 {
+
+    font-size: 1.5rem;
+
+}
+
+
+
+p {
+
+    margin: 0;
+
+    color: var(--text-muted);
+
+}
+
+
+
+p + p {
+
+    margin-top: 1.25rem;
+
+}
+
+.field-label {
+
+;
+
+}
+
+details[open] summary {
+
+    color: var(--gold);
+
+}
+
+details summary {
+
+    transition: color 1000ms ease;
+
+}
+
+details summary:hover {
+
+    color: var(--gold);
+
+    transition: color .5s ease;
+
+}
+
+
+
+/* ==================================================
+   Links
+================================================== */
+
+a {
+
+    color: inherit;
+
+    text-decoration-color: var(--gold);
+
+    text-underline-offset: .2rem;
+
+    transition: color .5s ease;
+
+}
+
+
+
+a:hover {
+
+    color: var(--gold);
+
+    transition: color 1s ease;
+
+}
+
+
+
+/* ==================================================
+   Images
+================================================== */
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+
+/* ==================================================
+   Focus
+================================================== */
+
+:focus-visible {
+
+    outline: 2px solid var(--gold);
+
+    outline-offset: .2rem;
+
+}
+
+
+
+/* ==================================================
+   Selection
+================================================== */
+
+::selection {
+
+    background: var(--gold);
+
+    color: var(--bg);
+
+}

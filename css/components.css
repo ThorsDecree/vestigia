@@ -1,0 +1,397 @@
+/*
+    VESTIGIA
+
+    Building continuity.
+
+    Components
+
+    Individual pieces of the workshop.
+
+    Leave good maps.
+*/
+
+
+
+/* ==================================================
+   Navigation
+================================================== */
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: var(--space-md);
+
+    flex-wrap: wrap;
+
+    font-size: .95rem;
+
+}
+
+
+
+nav ul {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-md);
+
+    list-style: none;
+
+}
+
+
+
+nav a {
+
+    text-decoration: none;
+
+}
+
+
+
+nav a,
+footer a,
+a {
+
+    transition:
+        color .2s ease,
+        text-decoration-color .2s ease;
+
+}
+
+nav a:hover,
+footer a:hover {
+
+    color: var(--gold);
+
+
+}
+
+
+
+.site-title {
+
+    font-weight: 700;
+
+    letter-spacing: .08em;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: .55rem;
+
+}
+
+.lantern {
+
+    font-size: 1em;
+
+    line-height: 1;
+
+}
+
+.entry-card + #field-notes {
+
+    margin-top: var(--space-lg);
+
+}
+
+
+
+.field-notes-list {
+
+    margin-top: var(--space-md);
+
+}
+
+
+/* ==================================================
+   Diagnostics
+================================================== */
+
+details {
+
+    border-top: 1px solid var(--border);
+
+    padding-block: var(--space-sm);
+
+}
+
+details[open] {
+
+    ;
+
+}
+
+summary {
+
+    cursor: pointer;
+
+    list-style: none;
+
+    font-weight: 500;
+
+}
+
+summary::-webkit-details-marker {
+
+    display: none;
+
+}
+
+summary::before {
+
+    content: "＋";
+
+    color: var(--gold);
+
+    margin-right: .75rem;
+
+}
+
+details[open] summary::before {
+
+    content: "–";
+
+}
+
+.diagnostic {
+
+    margin-top: var(--space-md);
+
+    padding-left: 2rem;
+
+}
+
+.diagnostic ol {
+
+    padding-left: 1.25rem;
+
+}
+
+.diagnostic li + li {
+
+    margin-top: 1rem;
+
+}
+
+
+.orientation {
+
+    margin-block: var(--space-md);
+
+}
+
+details {
+
+    padding-left: 1rem;
+
+}
+
+
+
+/* ==================================================
+   Hero
+================================================== */
+
+#hero {
+
+    min-height: 80svh;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-direction: column;
+
+}
+
+
+
+.tagline {
+
+    color: var(--gold);
+
+    margin-top: -.35rem;
+
+    margin-bottom: 2rem;
+
+}
+
+
+
+.button-group {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: var(--space-sm);
+
+    margin-top: 3rem;
+
+}
+
+
+
+.hero-title {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 1rem;
+
+    margin-bottom: .5rem;
+
+}
+
+.hero-title .lantern {
+
+    font-size: 4rem;
+
+    line-height: 1;
+
+    transform: translateY(-.2rem);
+
+}
+
+
+
+/* ==================================================
+   Buttons
+================================================== */
+
+.button {
+
+    display: inline-flex;
+
+    width: fit-content;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: .9rem 1.5rem;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background-color .2s ease;
+
+}
+
+
+
+.button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+
+.button.secondary {
+
+    border-color: var(--plum);
+
+}
+
+
+
+
+
+/* ==================================================
+   Articles
+================================================== */
+
+article {
+
+    padding: var(--space-md);
+
+    margin-top: var(--space-md);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+}
+
+
+
+
+
+/* ==================================================
+   Footer
+================================================== */
+
+footer ul {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: var(--space-sm);
+
+    list-style: none;
+
+}
+
+
+
+footer section {
+
+    margin-top: var(--space-lg);
+
+    opacity: .8;
+
+}
+
+
+/* ==================================================
+   Library
+================================================== */
+
+.library-grid {
+
+display:grid;
+
+gap:var(--space-lg);
+
+}
+
+.library-card {
+
+display:flex;
+
+flex-direction:column;
+
+gap:var(--space-sm);
+
+}
+
+.library-type {
+
+font-size:.85rem;
+
+opacity:.7;
+
+letter-spacing:.08em;
+
+text-transform:uppercase;
+
+}

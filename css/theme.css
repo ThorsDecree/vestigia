@@ -1,0 +1,34 @@
+/*
+    VESTIGIA
+
+    Building continuity.
+
+    Theme
+*/
+
+:root {
+
+    --bg: #111114;
+    --surface: #1b1b20;
+    --surface-soft: #24242c;
+
+    --text: #f3f2ef;
+    --text-muted: #b8b7b3;
+
+    --gold: #d8b76a;
+    --plum: #7a5ca8;
+    --rose: #d08ab6;
+
+    --border: rgba(255,255,255,.08);
+
+    --content-width: 720px;
+
+    --radius: 18px;
+
+    --space-xs: .5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+
+}
