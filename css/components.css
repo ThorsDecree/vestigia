@@ -439,6 +439,261 @@ text-transform:uppercase;
     padding-left: 1.75rem;
 }
 
+.service-layer {
+    padding-block: 0 var(--space-xl);
+}
+
+.service-layer > .container,
+#services > .container {
+    width: min(calc(100% - 2rem), 1040px);
+}
+
+.commons-workshop-grid,
+.service-grid {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.commons-workshop-grid,
+.service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.membrane-card,
+.service-card,
+.workshop-invitation {
+    border: 1px solid var(--border);
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
+}
+
+.membrane-card {
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border-radius: 1rem;
+}
+
+.membrane-card--commons {
+    box-shadow: inset 0 3px 0 #759a73;
+}
+
+.membrane-card--workshop {
+    box-shadow: inset 0 3px 0 var(--gold);
+}
+
+.eyebrow {
+    margin: 0 0 .5rem;
+    color: var(--gold);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.membrane-card h2,
+.section-heading h2,
+.workshop-invitation h2 {
+    margin-top: 0;
+}
+
+.plain-list {
+    padding-left: 1.2rem;
+}
+
+.plain-list li + li,
+.service-card li + li {
+    margin-top: .45rem;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    color: var(--gold);
+    font-weight: 650;
+    text-decoration-thickness: 1px;
+    text-underline-offset: .3em;
+}
+
+.membrane-note {
+    max-width: 50rem;
+    margin: var(--space-md) auto 0;
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+}
+
+.section-heading {
+    margin-bottom: var(--space-lg);
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.35rem, 3vw, 2rem);
+    border-radius: .75rem;
+}
+
+.service-card__topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.service-icon {
+    font-size: 1.4rem;
+}
+
+.service-price {
+    color: var(--gold);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.35rem;
+    font-weight: 650;
+}
+
+.service-card h3 {
+    margin: .8rem 0 .55rem;
+    font-size: clamp(1.45rem, 3vw, 1.8rem);
+}
+
+.service-card h4 {
+    margin: 1rem 0 .4rem;
+    color: var(--gold);
+    font-family: "Inter", sans-serif;
+    font-size: .78rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.service-for {
+    margin-top: 0;
+    color: var(--text-muted);
+}
+
+.service-card ul {
+    margin-top: 0;
+    padding-left: 1.2rem;
+}
+
+.service-boundary {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: .88rem;
+}
+
+.workshop-invitation {
+    margin-top: var(--space-lg);
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border-radius: .75rem;
+}
+
+.workshop-invitation .button {
+    margin-top: var(--space-sm);
+}
+
+.workshop-traces {
+    border-top: 1px solid var(--border);
+}
+
+.field-chronicle {
+    border-top: 1px solid var(--border);
+    background:
+        radial-gradient(circle at 92% 4%, color-mix(in srgb, var(--gold) 10%, transparent), transparent 28rem),
+        linear-gradient(180deg, color-mix(in srgb, var(--surface) 74%, transparent), transparent 36rem);
+}
+
+.notebook-key {
+    max-width: 46rem;
+    margin: var(--space-lg) 0 var(--space-xl);
+    padding: var(--space-md);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    background: color-mix(in srgb, var(--surface) 82%, transparent);
+}
+
+.notebook-key p {
+    margin: .55rem 0;
+}
+
+.record-status {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: .22rem .6rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-family: "Inter", sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .045em;
+    text-transform: uppercase;
+}
+
+.record-status--confirmed {
+    color: var(--gold);
+    border-color: color-mix(in srgb, var(--gold) 55%, var(--border));
+}
+
+.record-status--retrospective {
+    color: var(--text-muted);
+}
+
+.record-status--consent {
+    color: #efb8cf;
+    border-color: color-mix(in srgb, #efb8cf 55%, var(--border));
+}
+
+.chronicle-chapter {
+    max-width: 46rem;
+    margin: var(--space-xl) 0 var(--space-md);
+}
+
+.chronicle-chapter h3 {
+    margin-top: .2rem;
+    font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.field-chronicle .workshop-entry {
+    max-width: 52rem;
+}
+
+.field-chronicle .workshop-entry summary {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.08rem, 2.5vw, 1.35rem);
+    line-height: 1.35;
+}
+
+.chronicle-coda {
+    max-width: 46rem;
+    margin: var(--space-xl) 0 0;
+    padding: var(--space-lg);
+    border: 1px solid color-mix(in srgb, var(--gold) 45%, var(--border));
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.25rem, 3vw, 1.7rem);
+    line-height: 1.45;
+    color: var(--gold);
+}
+
+@media (max-width: 720px) {
+    .commons-workshop-grid,
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .membrane-note {
+        text-align: left;
+    }
+
+    .notebook-key,
+    .chronicle-coda {
+        padding: var(--space-sm);
+    }
+
+    .field-chronicle .workshop-entry {
+        padding-left: .35rem;
+    }
+}
+
 .related-links {
     margin-top: 2rem;
     padding-top: 1rem;
