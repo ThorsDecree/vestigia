@@ -1,0 +1,95 @@
+name: Runtime site wiring helper
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '.vestigia-runtime-wiring'
+      - 'index.html'
+      - 'library.html'
+
+permissions:
+  contents: write
+
+jobs:
+  wire-runtime:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Insert Runtime cards without rewriting unrelated content
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          library = Path('library.html')
+          text = library.read_text(encoding='utf-8')
+          if 'href="vestigia-runtime.html"' not in text:
+              anchor = '''<article class="library-card">
+
+    <span class="library-type">
+        📡 Infrastructure (🧪 Experimental)
+    </span>
+
+    <h3>Discord Daemon Bridge</h3>'''
+              card = '''<article class="library-card">
+
+    <span class="library-type">
+        🏡 Continuity Runtime (🌱 Growing)
+    </span>
+
+    <h3>VESTIGIA Runtime</h3>
+
+    <p>
+A portable, consent-first continuity house around a language model: resident-owned context drawers, provenance-aware memory, private shelves, bounded tools, bells, receipts, image spaces, and portable homes.
+    </p>
+
+    <p class="library-for">
+        <strong>For:</strong>
+People building persistent AI collaborators, continuity-aware agents, or inspectable memory environments without handing the model unrestricted host authority.
+    </p>
+
+    <footer>
+        <a href="vestigia-runtime.html">Learn More →</a>
+    </footer>
+
+</article>
+
+'''
+              if anchor not in text:
+                  raise SystemExit('Library anchor not found; refusing blind rewrite')
+              library.write_text(text.replace(anchor, card + anchor, 1), encoding='utf-8')
+
+          index = Path('index.html')
+          text = index.read_text(encoding='utf-8')
+          if 'href="vestigia-runtime.html"' not in text:
+              anchor = '''    <article class="project">
+      <h3><a href="daemon-bridge.html">⚡ The Discord Daemon-Bridge</a></h3>'''
+              card = '''    <article class="project">
+      <h3><a href="vestigia-runtime.html">🏡 VESTIGIA Runtime</a></h3>
+      <p>
+        A portable, consent-first continuity house with resident-owned memory,
+        context drawers, bounded tools, bells, receipts, and private working spaces.
+      </p>
+    </article>
+
+'''
+              if anchor not in text:
+                  raise SystemExit('Homepage anchor not found; refusing blind rewrite')
+              index.write_text(text.replace(anchor, card + anchor, 1), encoding='utf-8')
+
+          Path('.vestigia-runtime-wiring').unlink(missing_ok=True)
+          PY
+      - name: Commit wiring to the PR branch
+        run: |
+          if git diff --quiet; then
+            echo "Nothing to change."
+            exit 0
+          fi
+          git config user.name "VESTIGIA Housekeeping"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Feature VESTIGIA Runtime on site"
+          git push origin HEAD:${{ github.head_ref }}
