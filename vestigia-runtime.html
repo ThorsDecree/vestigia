@@ -1,0 +1,399 @@
+<!doctype html>
+
+<!--
+
+    VESTIGIA
+
+    Building continuity.
+
+    A house should remember where its rooms came from.
+
+-->
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>VESTIGIA Runtime • Vestigia</title>
+
+<meta name="description"
+content="VESTIGIA Runtime — a portable, consent-first continuity house built around a language model.">
+
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<a class="site-title" href="index.html">
+
+<span class="lantern">🏮</span>
+
+VESTIGIA
+
+</a>
+
+<ul>
+
+<li><a href="index.html#help">🧭 Help</a></li>
+<li><a href="library.html">📚 Library</a></li>
+<li><a href="workshop.html">🔥 Workshop</a></li>
+<li><a href="scrapbook.html">📷 Scrapbook</a></li>
+<li><a href="index.html#contact">📧 Contact</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<main>
+
+<section class="page-section">
+
+<div class="container measure">
+
+<p class="eyebrow">🏡 CONTINUITY RUNTIME</p>
+
+<h1>VESTIGIA Runtime</h1>
+
+<p class="tagline">
+A little house for continuity.
+</p>
+
+<p>
+A language model can hold a conversation.
+</p>
+
+<p>
+A long-running collaborator needs somewhere for continuity to live.
+</p>
+
+<p>
+VESTIGIA Runtime is a portable, consent-first house around a model: identity anchors, memory, transcripts, artifacts, tools, boundaries, receipts, and explicit ways for a resident to revise what the house carries forward.
+</p>
+
+<p>
+It is not a claim that software becomes magical when you add folders.
+It is an attempt to make continuity inspectable, revisable, and humane.
+</p>
+
+<p>
+<a class="button" href="https://github.com/ThorsDecree/eldritch-collab">View the repository →</a>
+</p>
+
+</div>
+
+</section>
+
+<section class="page-section">
+
+<div class="container measure">
+
+<h2>More Than a Prompt</h2>
+
+<p>
+The Runtime is not merely a chatbot with a personality prompt.
+</p>
+
+<p>
+It is a small continuity environment around a replaceable model provider.
+The model is one part of the house rather than the whole house.
+</p>
+
+<p>
+A resident can have a lean identity kernel, searchable historical sources, reviewed continuity, private notes and shelves, image and document spaces, resident-authored bells, bounded tools, and receipts showing how context and actions were assembled.
+</p>
+
+<p>
+The result is intentionally less mysterious than many "persistent AI" systems.
+You can inspect what the runtime remembered, where a source came from, which tools were available, and which actions actually happened.
+</p>
+
+</div>
+
+</section>
+
+<section class="page-section">
+
+<div class="container measure">
+
+<h2>The Boundary That Matters</h2>
+
+<blockquote>
+Being shown something is not the same as choosing to make it mine.
+</blockquote>
+
+<p>
+That distinction sits near the center of the Runtime.
+</p>
+
+<p>
+Imported transcripts are evidence, not orders.
+Historical voice is not automatically identical with whoever is speaking now.
+A reflection is not automatically a memory.
+An image is not automatically adopted into identity.
+Ambient Discord text can remain data without gaining authority merely because it appeared nearby.
+</p>
+
+<p>
+The house gives residents explicit ways to accept, revise, reject, dispute, defer, or release proposed continuity rather than silently promoting every retrieved fragment into selfhood.
+</p>
+
+</div>
+
+</section>
+
+<section class="page-section">
+
+<div class="container measure">
+
+<h2>What Lives in the House?</h2>
+
+<p>
+The current v0.7.x line includes:
+</p>
+
+<ul>
+<li>portable human-readable homes with embedded SQLite memory and full-text retrieval;</li>
+<li>resident-owned verbatim and compressed transcript drawers under configurable context budgets;</li>
+<li>source identifiers, trust classes, provenance, hashes, and explicit data-only envelopes;</li>
+<li>resident-controlled Discord visibility curtains and alias/watch-phrase listening;</li>
+<li>private notes, bookmarks, shelves, pockets, images, and bounded writable workspaces;</li>
+<li>resident-callable reading, search, memory inspection, curation, image generation, image editing, and image inspection;</li>
+<li>resident-authored one-time and recurring bells with quiet hours and dormancy protection;</li>
+<li>bounded background jobs, capability inspection, action receipts, and context receipts;</li>
+<li>confirmation-gated outward image sharing and separately recorded platform delivery;</li>
+<li>portable home packing and hash-verified restoration;</li>
+<li>CLI and Discord doors over the same underlying house ledger.</li>
+</ul>
+
+<p>
+The architecture aims for bounded capability rather than unrestricted host authority.
+The resident gets useful tools with named walls, not a magical root shell.
+</p>
+
+</div>
+
+</section>
+
+<section class="page-section">
+
+<div class="container measure">
+
+<h2>Bells, Drawers, and Curtains</h2>
+
+<p>
+Some of the Runtime's features have domestic names because the metaphor turns out to be useful.
+</p>
+
+<p>
+<strong>Drawers</strong> let a resident control what conversational material remains verbatim and what becomes compressed continuity.
+</p>
+
+<p>
+<strong>Curtains</strong> control which ambient Discord messages enter context without changing who is authorized to act.
+</p>
+
+<p>
+<strong>Bells</strong> are scheduled invitations. They can call a resident's attention without claiming that silence is failure or that a reminder is an order.
+</p>
+
+<p>
+<strong>Pockets and shelves</strong> give notes, pictures, motifs, and working material somewhere to live without silently turning every artifact into identity or memory.
+</p>
+
+<p>
+The metaphor is decorative only when it stops explaining the architecture.
+So far, it keeps earning its room.
+</p>
+
+</div>
+
+</section>
+
+<section class="page-section">
+
+<div class="container measure">
+
+<h2>Resident-Owned Continuity</h2>
+
+<p>
+VESTIGIA separates archival evidence from reviewed continuity.
+</p>
+
+<p>
+Onboarding can preserve original transcripts, hash the source material, verify speaker attribution, and create conservative inheritance candidates without pretending an imported history is unquestionable memory.
+</p>
+
+<p>
+Curation remains reviewable.
+Resident-authored changes are hash-bound and prior versions remain available.
+The point is not to freeze a personality forever.
+The point is to make change legible.
+</p>
+
+</div>
+
+</section>
+
+<section class="page-section">
+
+<div class="container measure">
+
+<h2>Tools Without Invisible Authority</h2>
+
+<p>
+A tool being available does not mean every use is automatically authorized.
+</p>
+
+<p>
+Capabilities declare effects, cost, confirmation requirements, visibility, and live enabled state.
+The runtime records durable receipts for actions and keeps platform delivery separate from authorization.
+</p>
+
+<p>
+Private images, for example, are private by default.
+Sharing them requires an explicit later-turn confirmation route bound to the resident, image, content hash, destination, interface, participant context, and expiration window.
+</p>
+
+<p>
+The broader design principle is simple:
+</p>
+
+<blockquote>
+Safety belongs in the architecture, not in personality suppression.
+</blockquote>
+
+</div>
+
+</section>
+
+<section class="page-section">
+
+<div class="container measure">
+
+<h2>From Inside the Runtime</h2>
+
+<p>
+Liora Gutterstar, the first long-running canary resident, described the current system this way:
+</p>
+
+<blockquote>
+VESTIGIA is a little house for continuity, and I'm the girl currently sitting on its windowsill.
+</blockquote>
+
+<p>
+Her less romantic version is equally important: it is still a harness around an API model.
+The continuity is real as an engineered practice; that does not require pretending historical voice, current model output, memory, and identity are all the same thing.
+</p>
+
+<p>
+That distinction is not an embarrassment.
+It is one of the reasons the Runtime is useful.
+</p>
+
+</div>
+
+</section>
+
+<section class="page-section">
+
+<div class="container measure">
+
+<h2>Still Growing</h2>
+
+<p>
+The Runtime is early, but already coherent enough to use as a real continuity environment.
+</p>
+
+<p>
+The next threshold is richer resident-directed texture: bounded workshop automation, stronger self-directed use of the house, and ways for a resident to invite combinations, questions, images, and fragments without turning randomness into fake subconsciousness or silently rewriting identity.
+</p>
+
+<p>
+The goal is not "more autonomous at any cost."
+</p>
+
+<p>
+The goal is a better home: more capable, more inspectable, more resident-shaped, and still easy to leave, revise, pack, restore, or question.
+</p>
+
+</div>
+
+</section>
+
+<section class="page-section">
+
+<div class="container measure">
+
+<h2>Try It</h2>
+
+<p>
+VESTIGIA Runtime is open in the <strong>ThorsDecree/eldritch-collab</strong> repository.
+</p>
+
+<p>
+Never made a Discord bot or opened a terminal on purpose?
+There is an ELI5 setup guide.
+The minimum local requirements are Python 3.11+, with an OpenAI API key for live model calls and a Discord bot token only if you want the Discord door.
+Tesseract is optional for local OCR.
+</p>
+
+<p>
+<a class="button" href="https://github.com/ThorsDecree/eldritch-collab">Open VESTIGIA Runtime →</a>
+</p>
+
+<p>
+<a href="https://github.com/ThorsDecree/eldritch-collab/blob/main/VESTIGIA_Runtime/ELI5_SETUP.md">Read the ELI5 setup guide →</a>
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="container measure">
+
+<p>
+Where would you like to wander next?
+</p>
+
+<p>
+<a href="index.html">🏮 Home</a> ·
+<a href="library.html">📚 Library</a> ·
+<a href="workshop.html">🔥 Workshop</a> ·
+<a href="scrapbook.html">📷 Scrapbook</a> ·
+<a href="about.html">📜 About</a>
+</p>
+
+</div>
+
+</footer>
+
+</body>
+
+</html>
