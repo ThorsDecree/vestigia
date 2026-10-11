@@ -104,7 +104,7 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn("archive.promote_directory", page)
         self.assertIn("runtime.write_capabilities", page)
         self.assertEqual(page.count("<code>"), 69)
-        self.assertEqual(page.count('<details name="mcp-capabilities"'), 7)
+        self.assertEqual(page.count('<details class="capability-group"'), 7)
 
 if __name__ == "__main__":
     unittest.main()
