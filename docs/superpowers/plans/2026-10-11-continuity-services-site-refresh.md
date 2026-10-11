@@ -42,11 +42,13 @@
 - Produces: standard-library unittest checks runnable with python -m unittest tests.test_site_contract.
 
 - [ ] **Step 1: Write the failing tests**
-  - Add a local-link and fragment checker for the site pages in scope.
-  - Assert the Library points to archive.html and mcp-server.html.
-  - Assert current Runtime/MCP development version labels.
-  - Assert the Daemon-Bridge page presents it as active and separates MCP log/relay limitations.
-  - Assert the Workshop includes the two service lanes and preserves Commons language.
+  - Add these checks using Python HTMLParser and unittest: test_internal_links_resolve; test_library_links_to_archive_and_mcp; test_versions_are_labeled_as_development; test_bridge_activity_and_mcp_boundary_are_distinct; test_workshop_leads_with_two_lanes_and_keeps_commons; and test_public_site_omits_signal_and_payment_handles.
+  - test_internal_links_resolve parses href/src references in the scoped pages and asserts each local target file and any supplied fragment ID exists.
+  - test_library_links_to_archive_and_mcp asserts library.html links to archive.html and mcp-server.html.
+  - test_versions_are_labeled_as_development asserts Runtime 0.8.0.dev0 and MCP 0.10.0.dev0 appear with development labels.
+  - test_bridge_activity_and_mcp_boundary_are_distinct asserts the Bridge is active and the MCP log/relay boundary is explicit.
+  - test_workshop_leads_with_two_lanes_and_keeps_commons asserts relational continuity, agent/MCP reliability, and free Commons language remain present.
+  - test_public_site_omits_signal_and_payment_handles asserts user-provided Signal/CashApp/PayPal identifiers are absent from public HTML.
 
 - [ ] **Step 2: Run the tests against the branch baseline**
   - Run: python -m unittest tests.test_site_contract -v
