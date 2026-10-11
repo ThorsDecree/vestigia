@@ -55,7 +55,7 @@
             <h2 id="capabilities-heading">Current capability catalog</h2>
             <p>The live connected policy lists <strong>69 named MCP capabilities</strong>, grouped below by subsystem. Each group can be opened independently. Availability still depends on the operator’s deployment settings, linked subsystem health, and the tool’s own permission checks; this catalog is a snapshot of the policy surface, not a promise that every operation is enabled everywhere.</p>
             <div class="capability-groups">
-                <details name="mcp-capabilities" open>
+                <details class="capability-group" open>
                     <summary>🎴 GameTable & Magic: The Gathering Commander <span>(15)</span></summary>
                     <p>15 tools. The Commander profile supports 2–4 seats, 40 starting life, opening hands, turn steps, priority, and seat-filtered views. It tracks table state; it does not enforce card legality or the full rules engine.</p>
                     <ul class="capability-list">
@@ -76,7 +76,7 @@
                     <li><code>game.yield</code></li>
                     </ul>
                 </details>
-                <details name="mcp-capabilities">
+                <details class="capability-group">
                     <summary>🏮 Archive access and change proposals <span>(20)</span></summary>
                     <p>20 tools. Search, inspect, read text or media, compare changes, check health, and stage or promote bounded Archive updates under deployment policy.</p>
                     <ul class="capability-list">
@@ -102,7 +102,7 @@
                     <li><code>archive.write_capabilities</code></li>
                     </ul>
                 </details>
-                <details name="mcp-capabilities">
+                <details class="capability-group">
                     <summary>🏡 Runtime and House Mechanic <span>(10)</span></summary>
                     <p>10 tools. Inspect Runtime capabilities and status, route allowed Runtime calls, and inspect or invoke House Mechanic operations where enabled.</p>
                     <ul class="capability-list">
@@ -118,7 +118,7 @@
                     <li><code>runtime.write_capabilities</code></li>
                     </ul>
                 </details>
-                <details name="mcp-capabilities">
+                <details class="capability-group">
                     <summary>🖼️ Lanternslide image catalog <span>(6)</span></summary>
                     <p>6 tools. Scan bounded image batches, inspect catalog status, search metadata, deal a deterministic sample, or build a contact sheet.</p>
                     <ul class="capability-list">
@@ -130,7 +130,7 @@
                     <li><code>lanternslide.status</code></li>
                     </ul>
                 </details>
-                <details name="mcp-capabilities">
+                <details class="capability-group">
                     <summary>📁 Operator-named read-only mounts <span>(5)</span></summary>
                     <p>5 tools. List, search, and read bounded text or supported image files from configured external roots.</p>
                     <ul class="capability-list">
@@ -141,7 +141,7 @@
                     <li><code>mount.status</code></li>
                     </ul>
                 </details>
-                <details name="mcp-capabilities">
+                <details class="capability-group">
                     <summary>⚡ Daemon-Bridge <span>(4)</span></summary>
                     <p>4 tools. Inspect bridge status, residents, and declared capabilities, or query the configured bridge. This deployment does not inspect the active Discord room’s logs or relay messages to this chat.</p>
                     <ul class="capability-list">
@@ -151,7 +151,7 @@
                     <li><code>daemon_bridge.status</code></li>
                     </ul>
                 </details>
-                <details name="mcp-capabilities">
+                <details class="capability-group">
                     <summary>🧭 Inspection, consent, and receipts <span>(9)</span></summary>
                     <p>9 tools. Check deployment identity and status, get a compact house overview, inspect audit and request receipts, and review declarative perception boundaries.</p>
                     <ul class="capability-list">
