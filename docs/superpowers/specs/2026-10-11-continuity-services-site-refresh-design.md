@@ -1,6 +1,6 @@
 # VESTIGIA Services and Site Refresh — Design Spec
 
-**Status:** Draft for Jeff's review  
+**Status:** Approved by Jeff  
 **Date:** 2026-10-11  
 **Scope:** Public GitHub Pages site and one internal VESTIGIA Archive links note. Contra remains untouched.
 
