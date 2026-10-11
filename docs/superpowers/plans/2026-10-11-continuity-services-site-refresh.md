@@ -108,13 +108,13 @@
 - [ ] **Step 1: Inspect write capabilities and current map hash**
   - Confirm create/replace grants for 00_Bootloader and read the live map content hash.
 - [ ] **Step 2: Stage the new note and map update**
-  - Use archive.stage_text for each file with expected base absent for the new note and the exact current map hash for the replacement.
+  - Call `archive.stage_text` on each target. For the new `00_Bootloader/house_links.md`, set `expected_base_sha256="absent"`; for the map replacement, pass the exact SHA-256 returned by `archive.read_text` for `00_Bootloader/map.md`.
 - [ ] **Step 3: Inspect both durable proposals**
-  - Confirm exact targets/content digest and unchanged base.
+  - Call `archive.stage_inspect` for each returned stage ID. Confirm the target, proposed content digest, and expected base hash before promotion.
 - [ ] **Step 4: Promote the links note first, then the map**
-  - Use each exact stage id and proposal digest; promotion refuses stale bases.
+  - Call `archive.promote` on the links note using its exact stage ID and proposal digest. Then promote the map using its exact stage ID and proposal digest. Promotion must reject a stale base.
 - [ ] **Step 5: Read both live files and verify**
-  - Confirm the user-provided spellings, private/public labels, map link, and absence of credentials/local paths.
+  - Call `archive.read_text` on both paths. Confirm user-provided spellings, private/public labels, the map link, and absence of credentials/local paths.
 
 ---
 
