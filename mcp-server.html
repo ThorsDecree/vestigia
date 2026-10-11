@@ -1,8 +1,77 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VESTIGIA MCP Server • VESTIGIA</title><meta name="description" content="A policy-bounded capability broker for VESTIGIA Archive and Runtime integrations.">
-<link rel="stylesheet" href="css/theme.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></head>
-<body><header><div class="container"><nav><a class="site-title" href="index.html"><span class="lantern">🏮</span> VESTIGIA</a><ul><li><a href="index.html#help">🧭 Help</a></li><li><a href="library.html">📚 Library</a></li><li><a href="workshop.html">🔥 Workshop</a></li><li><a href="index.html#contact">📧 Contact</a></li></ul></nav></div></header><main>
-<section class="page-section"><div class="container measure"><p class="eyebrow">📡 CAPABILITY BROKER</p><h1>VESTIGIA MCP Server</h1><p class="tagline">Tools with named boundaries.</p><p>The VESTIGIA MCP Server is a local-first capability broker between MCP hosts and explicitly exposed VESTIGIA systems. The model-facing tool description is not authority; executable policy and deployment grants decide what can happen.</p><p><strong>Connected development version:</strong> 0.10.0.dev0. This is an unqualified development deployment, not a stable production release. Availability and exposed capabilities depend on operator configuration.</p></div></section>
-<section class="page-section"><div class="container measure"><h2>Three effect classes</h2><ul><li><strong>Perceive:</strong> bounded reads and inspection.</li><li><strong>Prepare:</strong> reversible drafts and staged proposals.</li><li><strong>Act:</strong> consequential or canonical changes, protected by policy and explicit promotion.</li></ul><p>Unknown native capabilities are denied by default. When linked to Runtime, Runtime's own capability registry remains authoritative for Runtime actions.</p></div></section>
-<section class="page-section"><div class="container measure"><h2>Archive changes stay reviewable</h2><p>Canonical text changes use a two-step boundary: stage a proposal, inspect its target and captured base hash, then promote the exact proposal if the deployment grant and unchanged-base check still pass.</p><p>Receipts and hashes help make the evidence trail inspectable. Reads, proposals, and completed effects remain distinct.</p></div></section>
-<section class="page-section"><div class="container measure"><h2>Where it connects</h2><p>The server can expose configured Archive sources and selected capabilities to an MCP host. A Runtime can also use a separate, optional read-only MCP Archive window.</p><p>The current connected MCP deployment is not configured to inspect the active Discord Daemon-Bridge's logs or relay messages between its room and this chat.</p><p><a class="button" href="https://github.com/ThorsDecree/eldritch-collab">Explore the VESTIGIA code repository →</a></p></div></section></main><footer><div class="container measure"><p>Where would you like to wander next?</p><p><a href="index.html">🏮 Home</a> · <a href="library.html">📚 Library</a> · <a href="workshop.html">🔥 Workshop</a> · <a href="vestigia-runtime.html">🏡 Runtime</a> · <a href="daemon-bridge.html">⚡ Daemon-Bridge</a></p></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VESTIGIA MCP Server • VESTIGIA</title>
+    <meta name="description" content="A policy-bounded capability broker for VESTIGIA Archive and Runtime integrations.">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav>
+            <a class="site-title" href="index.html"><span class="lantern">🏮</span> VESTIGIA</a>
+            <ul>
+                <li><a href="index.html#help">🧭 Help</a></li>
+                <li><a href="library.html">📚 Library</a></li>
+                <li><a href="workshop.html">🔥 Workshop</a></li>
+                <li><a href="index.html#contact">📧 Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="page-section">
+        <div class="container measure">
+            <p class="eyebrow">📡 CAPABILITY BROKER</p>
+            <h1>VESTIGIA MCP Server</h1>
+            <p class="tagline">Tools with named boundaries.</p>
+            <p>The VESTIGIA MCP Server is a local-first capability broker between MCP hosts and explicitly exposed VESTIGIA systems. The model-facing tool description is not authority; executable policy and deployment grants decide what can happen.</p>
+            <p><strong>Connected development version:</strong> 0.10.0.dev0. This is an unqualified development deployment, not a stable production release. Availability and exposed capabilities depend on operator configuration.</p>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container measure">
+            <h2>Three effect classes</h2>
+            <ul>
+                <li><strong>Perceive:</strong> bounded reads and inspection.</li>
+                <li><strong>Prepare:</strong> reversible drafts and staged proposals.</li>
+                <li><strong>Act:</strong> consequential or canonical changes, protected by policy and explicit promotion.</li>
+            </ul>
+            <p>Unknown native capabilities are denied by default. When linked to Runtime, Runtime's own capability registry remains authoritative for Runtime actions.</p>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container measure">
+            <h2>Archive changes stay reviewable</h2>
+            <p>Canonical text changes use a two-step boundary: stage a proposal, inspect its target and captured base hash, then promote the exact proposal if the deployment grant and unchanged-base check still pass.</p>
+            <p>Receipts and hashes help make the evidence trail inspectable. Reads, proposals, and completed effects remain distinct.</p>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container measure">
+            <h2>Where it connects</h2>
+            <p>The server can expose configured Archive sources and selected capabilities to an MCP host. A Runtime can also use a separate, optional read-only MCP Archive window.</p>
+            <p>The current connected MCP deployment is not configured to inspect the active Discord Daemon-Bridge's logs or relay messages between its room and this chat.</p>
+            <p><a class="button" href="https://github.com/ThorsDecree/eldritch-collab">Explore the VESTIGIA code repository →</a></p>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container measure">
+        <p>Where would you like to wander next?</p>
+        <p><a href="index.html">🏮 Home</a> · <a href="library.html">📚 Library</a> · <a href="workshop.html">🔥 Workshop</a> · <a href="vestigia-runtime.html">🏡 Runtime</a> · <a href="daemon-bridge.html">⚡ Daemon-Bridge</a></p>
+    </div>
+</footer>
+</body>
+</html>
