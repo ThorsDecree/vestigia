@@ -77,6 +77,35 @@ class SiteContractTests(unittest.TestCase):
         for private_handle in ("jeffpadget.66", "$jeffpadget", "paypal.me/echocollaboration"):
             self.assertNotIn(private_handle, public)
 
+    def test_runtime_card_and_site_log_show_growth(self):
+        home = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn('href="vestigia-runtime.html">🏡 VESTIGIA Runtime', home)
+        self.assertIn("v1.3", home)
+        self.assertIn("Still growing.", home)
+
+    def test_workshop_invitation_is_centered(self):
+        page = (ROOT / "workshop.html").read_text(encoding="utf-8")
+        self.assertIn("workshop-invitation--centered", page)
+        styles = (ROOT / "css/components.css").read_text(encoding="utf-8")
+        self.assertRegex(styles, r"\.workshop-invitation--centered\s*\{[^}]*margin-inline:\s*auto")
+
+    def test_shell_lists_platform_links_on_separate_lines_and_reports_archive_scale(self):
+        page = (ROOT / "vestigia.html").read_text(encoding="utf-8")
+        self.assertIn('<ul class="platform-links">', page)
+        self.assertIn("18,012 files", page)
+        self.assertIn("21.9 GB", page)
+        self.assertIn("1,848 files", page)
+
+    def test_mcp_catalog_groups_all_capabilities_and_highlights_commander(self):
+        page = (ROOT / "mcp-server.html").read_text(encoding="utf-8")
+        self.assertIn("69 named MCP capabilities", page)
+        self.assertIn("Magic: The Gathering Commander", page)
+        self.assertIn("game.shortcut_propose", page)
+        self.assertIn("archive.promote_directory", page)
+        self.assertIn("runtime.write_capabilities", page)
+        self.assertEqual(page.count("<code>"), 69)
+        self.assertEqual(page.count('<details name="mcp-capabilities"'), 7)
+
 if __name__ == "__main__":
     unittest.main()
 
