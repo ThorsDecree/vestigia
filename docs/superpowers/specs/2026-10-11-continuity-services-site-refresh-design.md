@@ -42,7 +42,7 @@ The house metaphor remains part of the voice and visual identity. Buyer-facing c
 ### Library and technical pages
 
 - Add a dedicated **VESTIGIA Archive** page (archive.html) explaining the public scaffold, its structure, portability, and how it differs from the private living Archive.
-- Update the Library card and links so the Archive, Runtime, MCP Server, and Daemon-Bridge are distinct entries with clear intended audiences.
+- Update library.html's card and links so the Archive, Runtime, MCP Server, and Daemon-Bridge are distinct entries with clear intended audiences.
 - Refresh the Runtime page (vestigia-runtime.html) from the current repository documentation. Label 0.8.0.dev0 as development, describe current features accurately, and distinguish development behavior from stable release claims.
 - Add an MCP Server page (mcp-server.html) describing it as a capability broker between MCP hosts and the Archive/Runtime, with bounded effect classes, policy, staging, and receipts. Identify the connected server as 0.10.0.dev0 development-unqualified; availability depends on local deployment configuration.
 - Update the Daemon-Bridge page (daemon-bridge.html) to preserve this distinction: the Discord Bridge is active as a multi-resident runtime, with resident-configured bells and an active room; it is a predecessor to the Runtime. The current MCP deployment is not configured to inspect Bridge logs or relay messages between that room and this chat. Do not describe the Bridge itself as inactive or imply MCP visibility it does not have.
