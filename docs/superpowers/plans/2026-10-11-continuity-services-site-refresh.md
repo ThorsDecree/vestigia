@@ -41,7 +41,7 @@
 - Consumes: edited site HTML files in the repository root.
 - Produces: standard-library unittest checks runnable with python -m unittest tests.test_site_contract.
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
   - Add these checks using Python HTMLParser and unittest: test_internal_links_resolve; test_library_links_to_archive_and_mcp; test_versions_are_labeled_as_development; test_bridge_activity_and_mcp_boundary_are_distinct; test_workshop_leads_with_two_lanes_and_keeps_commons; and test_public_site_omits_signal_and_payment_handles.
   - test_internal_links_resolve parses href/src references in the scoped pages and asserts each local target file and any supplied fragment ID exists.
   - test_library_links_to_archive_and_mcp asserts library.html links to archive.html and mcp-server.html.
@@ -50,11 +50,11 @@
   - test_workshop_leads_with_two_lanes_and_keeps_commons asserts relational continuity, agent/MCP reliability, and free Commons language remain present.
   - test_public_site_omits_signal_and_payment_handles asserts user-provided Signal/CashApp/PayPal identifiers are absent from public HTML.
 
-- [ ] **Step 2: Run the tests against the branch baseline**
+- [x] **Step 2: Run the tests against the branch baseline**
   - Run: python -m unittest tests.test_site_contract -v
   - Expected: FAIL because the new pages and approved copy have not been added yet; any import or parser error is a test defect to fix before continuing.
 
-- [ ] **Step 3: Keep the checks limited to observable page contracts**
+- [x] **Step 3: Keep the checks limited to observable page contracts**
   - Use Python HTMLParser and pathlib only. Avoid network requests and third-party dependencies.
 
 ---
@@ -75,21 +75,21 @@
 - Consumes: approved design spec and the public site contract tests from Task 1.
 - Produces: linked, buyer-readable pages with current, deployment-qualified project descriptions.
 
-- [ ] **Step 1: Re-run the Task 1 tests and confirm expected failures**
-- [ ] **Step 2: Update Home and Workshop copy**
+- [x] **Step 1: Re-run the Task 1 tests and confirm expected failures**
+- [x] **Step 2: Update Home and Workshop copy**
   - Lead with relational continuity and name agent/MCP reliability as a second lane.
   - Feature bounded diagnostic, continuity/project handoff, and MCP/agent reliability review offers.
   - Keep secondary workflow/build services and the Field Notebook.
   - Add a direct Workshop/Contra contact route and a modest Support the Commons route using the existing Ko-fi link.
-- [ ] **Step 3: Add Archive and MCP Server pages; update Library routes**
+- [x] **Step 3: Add Archive and MCP Server pages; update Library routes**
   - Explain the public Archive scaffold separately from the private living Archive.
   - Describe MCP as a policy-bounded capability broker; label connected deployment status as development-unqualified.
   - Add distinct Library cards for Archive, Runtime, MCP Server, and active Daemon-Bridge.
-- [ ] **Step 4: Refresh existing technical pages**
+- [x] **Step 4: Refresh existing technical pages**
   - Update Runtime features and development label using current repository evidence.
   - Remove stale gallery-coming-soon language from the Shell page and point to current project pages.
   - Describe the Bridge as active in Discord with resident-configured bells; clarify that MCP cannot inspect its logs or relay its messages.
-- [ ] **Step 5: Run the contract tests**
+- [x] **Step 5: Run the contract tests**
   - Run: python -m unittest tests.test_site_contract -v
   - Expected: PASS with all local links resolving and all required copy/status checks satisfied.
 
@@ -105,15 +105,15 @@
 - Consumes: user-provided profile/contact/support identifiers and the MCP deployment's current write grants.
 - Produces: a source-of-truth inventory with public/private status labels, verification dates, and a map entry.
 
-- [ ] **Step 1: Inspect write capabilities and current map hash**
+- [x] **Step 1: Inspect write capabilities and current map hash**
   - Confirm create/replace grants for 00_Bootloader and read the live map content hash.
-- [ ] **Step 2: Stage the new note and map update**
+- [x] **Step 2: Stage the new note and map update**
   - Call `archive.stage_text` on each target. For the new `00_Bootloader/house_links.md`, set `expected_base_sha256="absent"`; for the map replacement, pass the exact SHA-256 returned by `archive.read_text` for `00_Bootloader/map.md`.
-- [ ] **Step 3: Inspect both durable proposals**
+- [x] **Step 3: Inspect both durable proposals**
   - Call `archive.stage_inspect` for each returned stage ID. Confirm the target, proposed content digest, and expected base hash before promotion.
-- [ ] **Step 4: Promote the links note first, then the map**
+- [x] **Step 4: Promote the links note first, then the map**
   - Call `archive.promote` on the links note using its exact stage ID and proposal digest. Then promote the map using its exact stage ID and proposal digest. Promotion must reject a stale base.
-- [ ] **Step 5: Read both live files and verify**
+- [x] **Step 5: Read both live files and verify**
   - Call `archive.read_text` on both paths. Confirm user-provided spellings, private/public labels, the map link, and absence of credentials/local paths.
 
 ---
@@ -128,8 +128,8 @@
 - Consumes: completed Tasks 1-3.
 - Produces: a verified branch and draft pull request for Jeff's final review before publishing.
 
-- [ ] **Step 1: Run the full site contract tests and repository checks available for this static site**
-- [ ] **Step 2: Fetch each changed GitHub file and inspect the actual branch diff**
-- [ ] **Step 3: Confirm no Contra files or main-branch files changed**
-- [ ] **Step 4: Create a draft pull request describing scope, checks, Archive note handling, and known development-status limits**
-- [ ] **Step 5: Report the draft PR and request final approval before merge/deployment**
+- [x] **Step 1: Run the full site contract tests and repository checks available for this static site**
+- [x] **Step 2: Fetch each changed GitHub file and inspect the actual branch diff**
+- [x] **Step 3: Confirm no Contra files or main-branch files changed**
+- [x] **Step 4: Create a draft pull request describing scope, checks, Archive note handling, and known development-status limits**
+- [x] **Step 5: Report the draft PR and request final approval before merge/deployment**
