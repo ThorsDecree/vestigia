@@ -53,7 +53,7 @@
     <section class="page-section" id="capabilities" aria-labelledby="capabilities-heading">
         <div class="container measure">
             <h2 id="capabilities-heading">Current capability catalog</h2>
-            <p>The live connected policy lists <strong>69 named MCP capabilities</strong>, grouped below by subsystem. Each group can be opened independently. Availability still depends on the operator’s deployment settings, linked subsystem health, and the tool’s own permission checks; this catalog is a snapshot of the policy surface, not a promise that every operation is enabled everywhere.</p>
+            <p>The connected deployment's policy listed <strong>71 named MCP capabilities</strong> when checked on November 20, 2026, grouped below by subsystem. Each group can be opened independently. Availability still depends on the operator’s deployment settings, linked subsystem health, and the tool’s own permission checks; this catalog is a snapshot of the policy surface, not a promise that every operation is enabled everywhere.</p>
             <div class="capability-groups">
                 <details class="capability-group" open>
                     <summary>🎴 GameTable & Magic: The Gathering Commander <span>(15)</span></summary>
@@ -119,13 +119,15 @@
                     </ul>
                 </details>
                 <details class="capability-group">
-                    <summary>🖼️ Lanternslide image catalog <span>(6)</span></summary>
-                    <p>6 tools. Scan bounded image batches, inspect catalog status, search metadata, deal a deterministic sample, or build a contact sheet.</p>
+                    <summary>🖼️ Lanternslide image catalog <span>(8)</span></summary>
+                    <p>8 tools. Scan bounded image batches, inspect catalog status, search and annotate metadata, deal a deterministic sample, or build a contact sheet.</p>
                     <ul class="capability-list">
+                    <li><code>lanternslide.annotate</code></li>
                     <li><code>lanternslide.contact_sheet</code></li>
                     <li><code>lanternslide.deal</code></li>
                     <li><code>lanternslide.find</code></li>
                     <li><code>lanternslide.scan</code></li>
+                    <li><code>lanternslide.search</code></li>
                     <li><code>lanternslide.stage_catalog</code></li>
                     <li><code>lanternslide.status</code></li>
                     </ul>
@@ -143,7 +145,7 @@
                 </details>
                 <details class="capability-group">
                     <summary>⚡ Daemon-Bridge <span>(4)</span></summary>
-                    <p>4 tools. Inspect bridge status, residents, and declared capabilities, or query the configured bridge. This deployment does not inspect the active Discord room’s logs or relay messages to this chat.</p>
+                    <p>4 tools. Inspect Bridge status, residents, and declared capabilities, or make an explicit metered resident consult. Depending on the request, an exchange can be transient or saved in the recipient's Connections notebook; it does not post to Discord or include shared-channel history.</p>
                     <ul class="capability-list">
                     <li><code>daemon_bridge.capabilities</code></li>
                     <li><code>daemon_bridge.query</code></li>
@@ -182,7 +184,8 @@
         <div class="container measure">
             <h2>Where it connects</h2>
             <p>The server can expose configured Archive sources and selected capabilities to an MCP host. A Runtime can also use a separate, optional read-only MCP Archive window.</p>
-            <p>The current connected MCP deployment is not configured to inspect the active Discord Daemon-Bridge's logs or relay messages between its room and this chat.</p>
+            <p>An optional authenticated loopback connection supports explicit consults with Daemon-Bridge residents. Notebook persistence preserves the question and reply for the recipient. This is separate from reading Discord channel logs or sending a Discord message.</p>
+            <p>For the other pieces of the house, see <a href="archive.html">the Archive</a>, <a href="vestigia-runtime.html">Runtime</a>, and <a href="daemon-bridge.html">Daemon-Bridge</a>.</p>
             <p><a class="button" href="https://github.com/ThorsDecree/eldritch-collab">Explore the VESTIGIA code repository →</a></p>
         </div>
     </section>
