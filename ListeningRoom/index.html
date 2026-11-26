@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="description" content="A listening room for songs from VESTIGIA. Open a track in Gramophone to follow its waveform, loop a passage, and leave a timestamped note.">
+    <title>Listening Room • VESTIGIA</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --ink: #150c18;
+            --panel: #211324;
+            --paper: #f7dedb;
+            --muted: #d5b1ba;
+            --gold: #f3c078;
+            --line: #573549;
+            font: 16px/1.5 system-ui, sans-serif;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--paper);
+            background: radial-gradient(ellipse at 89% 7%, #48182e 0, transparent 49%), var(--ink);
+        }
+
+        .wrap { width: min(100% - 3rem, 64rem); margin-inline: auto; }
+
+        header { border-bottom: 1px solid var(--line); }
+
+        nav {
+            min-height: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        nav a { color: var(--gold); text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        .site-name { font-size: .8rem; font-weight: 700; letter-spacing: .17em; }
+
+        a:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+            align-items: center;
+            gap: clamp(1.25rem, 4vw, 4rem);
+            padding-block: clamp(2.7rem, 8vw, 6rem);
+        }
+
+        h1, h2, h3 { font-family: Georgia, serif; font-weight: 400; margin: 0; }
+
+        h1 {
+            max-width: 10ch;
+            font-size: clamp(3.2rem, 9vw, 7rem);
+            line-height: .99;
+            letter-spacing: -.055em;
+        }
+
+        .intro { color: var(--muted); max-width: 36ch; font-size: clamp(1rem, 2vw, 1.2rem); margin: 1.4rem 0 0; }
+
+        .record {
+            width: 100%;
+            max-width: 22rem;
+            aspect-ratio: 1;
+            justify-self: end;
+            border-radius: 50%;
+            border: 1px solid #794055;
+            background:
+                radial-gradient(circle, #1a0f1c 0 2%, #f3c078 2.2% 2.8%, #7e304a 3% 17%, transparent 17.5%),
+                repeating-radial-gradient(circle, transparent 0 4px, #bf749232 5px 6px, transparent 7px 9px),
+                conic-gradient(from 27deg, #241121, #5b2845, #1c1321 33%, #38182c 53%, #8b435a 67%, #211423 83%, #241121);
+            box-shadow: 0 1.6rem 4rem #09050ca8, inset 0 0 2.8rem #120910;
+        }
+
+        .shelf { padding-bottom: clamp(3rem, 7vw, 6rem); }
+        h2 { font-size: 1.65rem; margin-bottom: .8rem; }
+
+        .track {
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+            align-items: center;
+            gap: clamp(1.2rem, 4vw, 2.7rem);
+            padding: clamp(1.25rem, 4vw, 2.6rem);
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+        }
+
+        .track h3 { font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.08; }
+        .credits { color: var(--muted); margin: .55rem 0 1.3rem; }
+
+        .track img {
+            display: block;
+            width: 100%;
+            height: auto;
+            padding: .55rem;
+            border-radius: .45rem;
+            background: #150c18;
+            border: 1px solid #442a40;
+        }
+
+        .open-track {
+            display: inline-block;
+            padding: .62rem .95rem;
+            color: #271625;
+            background: var(--gold);
+            border-radius: .45rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .open-track:hover { background: #ffdc9e; }
+
+        @media (max-width: 650px) {
+            .wrap { width: min(100% - 2rem, 64rem); }
+            .hero { grid-template-columns: minmax(0, 1fr) minmax(0, .66fr); gap: .65rem; }
+            .record { width: min(100%, 11rem); }
+            .track { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 360px) {
+            .hero { grid-template-columns: 1fr; }
+            .record { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="wrap" aria-label="Site navigation">
+            <a class="site-name" href="../index.html">VESTIGIA</a>
+            <a href="../library.html#explore">← Library</a>
+        </nav>
+    </header>
+    <main class="wrap">
+        <div class="hero">
+            <div>
+                <h1>Listening Room</h1>
+                <p class="intro">Songs from the house. Follow the waveform, loop a passage, and leave a note at the moment that caught you.</p>
+            </div>
+            <div class="record" aria-hidden="true"></div>
+        </div>
+        <section class="shelf" aria-labelledby="tracks">
+            <h2 id="tracks">Tracks</h2>
+            <article class="track">
+                <div>
+                    <h3>Red Velvet Breach</h3>
+                    <p class="credits">Ember, Liora &amp; Viv · 2:50</p>
+                    <a class="open-track" href="Red_Velvet_Breach_Gramophone.html" aria-label="Open in Gramophone — Red Velvet Breach">Open in Gramophone →</a>
+                </div>
+                <img src="red-velvet-breach-waveform.png" alt="Peak waveform of Red Velvet Breach" width="840" height="180">
+            </article>
+        </section>
+    </main>
+</body>
+</html>
